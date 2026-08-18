@@ -1,0 +1,19 @@
+[package]
+name = "gdb-orchestrator"
+version = "2.0.0"
+edition = "2024"
+
+[[bin]]
+name = "gdborch"
+path = "src/main.rs"
+
+[dependencies]
+pretty_env_logger = "0.5"
+log = "0.4"
+tabled = "0.20.0"
+clap = { version = "4", features = ["derive"] }
+once_cell = "1.21.3"
+chrono = "0.4.43"
+rusqlite = { version = "0.38.0", features = ["bundled"] }
+nix = { version = "0.27", features = ["signal"] }
+regex = "1.12.2"
